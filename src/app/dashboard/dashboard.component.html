@@ -1,0 +1,45 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="col title" translate>DASHBOARD.TITLE</div>
+  </div>
+  <p>
+    <input type="radio" value="state1" name="gender" [(ngModel)]="state" />
+    state1
+    <input type="radio" value="state2" name="gender" [(ngModel)]="state" />
+    state2
+  </p>
+  <div class="row">
+    <div class="col-10 col-lg-4">
+      <div id="contract-card" class="card shadow'">
+        {{ state }}
+        <div class="face front">
+          <div class="row">
+            <div class="col">
+              <img class="img-fluid" alt="Cuenta Icono" />
+            </div>
+          </div>
+          <div class="row">
+            <div class="col">
+              <h4 class="card-title">Descubiertos</h4>
+            </div>
+          </div>
+        </div>
+        <div class="face back" [@cardFliper]="state">
+          <div class="row">
+            <div class="col text-right" (click)="state = 'default'">close</div>
+          </div>
+          <div class="row">
+            <div class="col">
+              <img class="img-fluid" alt="hola Icono" />
+            </div>
+          </div>
+          <div class="row">
+            <div class="col">
+              <h4 class="card-title">HOLAAAA</h4>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
